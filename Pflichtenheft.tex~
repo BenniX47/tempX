@@ -1,0 +1,41 @@
+\documentclass[a4paper, 11pt, ngerman, fleqn]{article}
+\usepackage[ansinew]{inputenc}
+\usepackage{babel}
+\usepackage{ngerman}
+\usepackage{coordsys,logsys,color}
+\usepackage{german,fancyhdr}
+\usepackage{hyperref}
+\usepackage{texdraw}
+\input{txdtools}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hyperref}
+\definecolor{darkblue}{rgb}{0,0,.6}
+<<<<<<< HEAD:Pflichtenheft.tex
+\hypersetup{pdftex=false, colorlinks=true, breaklinks=true, linkcolor=darkgreen, menucolor=darkblue, pagecolor=darkblue, urlcolor=darkblue, citecolor=darkblue}
+=======
+\hypersetup{pdftex=false, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, pagecolor=darkblue, urlcolor=darkblue, citecolor=darkblue}
+>>>>>>> f92d9c0aeb798a2888e48675c35438bffa8d39e0:Pflichtenheft.tex
+
+\pagestyle{fancy}
+
+\input{_Pflichtenheft.tex}
+
+\begin{document}
+  \input{PH00-Titelblatt} \newpage
+  \tableofcontents \newpage
+  \input{PH01-Zielbestimmungen} \newpage
+  \input{PH02-Produkteinsatz} \newpage
+  \input{PH03-Produktumgebung} \newpage
+  \input{PH04-Funktionale_Anforderungen} \newpage
+  \input{PH05-Produktdaten} \newpage
+  \input{PH06-Nichtfunktionale_Anforderungen} \newpage
+  \input{PH07-Globale_Testfaelle} \newpage
+  \input{PH08-Systemmodelle} \newpage
+  \input{PH08a-Szenarien} \newpage
+  \input{PH08b-Anwendungsfaelle} \newpage
+  \input{PH08c-Objektmodell} \newpage
+  \input{PH08d-Dynamische_Modelle} \newpage
+  \input{PH08e-Benutzerschnittstelle} \newpage
+  \input{PH09-Glossar}
+\end{document}
