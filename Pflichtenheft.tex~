@@ -3,10 +3,7 @@
 \usepackage{babel}
 \usepackage{ngerman}
 \usepackage{coordsys,logsys,color}
-\usepackage{german,fancyhdr}
-\usepackage{hyperref}
-\usepackage{texdraw}
-\input{txdtools}
+
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{hyperref}
