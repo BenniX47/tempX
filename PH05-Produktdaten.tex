@@ -1,0 +1,134 @@
+\section{Produktdaten}
+
+\comment{Was speichert das Produkt (langfristig) aus Benutzersicht?}
+
+Jeder Punkt \textbf{/D???/} stellt im Prinzip einen Datensatz dar.
+
+\begin{description}
+  \item[/D010/]
+    \textit{Benutzerdaten:} Alle Informationen zu einem Benutzer:
+    \begin{itemize}
+      \item \textbf{BenutzerID} \textit{(eindeutig)}
+      \item Kennung
+        \begin{itemize}
+          \item \textbf{Benutzername} \textit{(eindeutig)}
+          \item \textbf{Passwort} \textit{(verschlüsselt)}
+        \end{itemize}
+      \item Persönliche Daten
+        \begin{itemize}
+          \item Informationen zur eigenen Person
+            \begin{itemize}
+              \item \textbf{Vorname}
+              \item \textbf{Nachname}
+              \item \textbf{Alter}
+              \item \textbf{Geschlecht} \textit{(männlich, weiblich)}
+              \item kleines \textbf{Foto}
+              \item \textbf{Begrüßungstext}
+              \item \textbf{Slogan}
+            \end{itemize}
+          \item Kontaktinformationen
+            \begin{itemize}
+              \item \textbf{Straße und Hausnummer}
+              \item \textbf{Postleitzahl}
+              \item \textbf{Ort}
+              \item \textbf{Land}
+              \item \textbf{Telefon}
+              \item \textbf{Fax}
+              \item \textbf{eMail-Adresse} \textit{(eindeutig, gültig)}
+              \item \textbf{Homepage}
+            \end{itemize}
+          \item \textbf{Sichtbarkeit} der einzelnen Einträge der persönlichen Daten
+        \end{itemize}
+      \item Sonstige Daten
+        \begin{itemize}
+          \item \textbf{Registrierungsdatum} \textit{(Datum)}
+          \item \textbf{letzte Anmeldung} \textit{(Datum)}
+          \item \textbf{Besuchszähler}
+          \item \textbf{Status} \textit{(Administrator, Benutzer)}
+        \end{itemize}
+    \end{itemize}
+\end{description}
+
+\begin{description}
+  \item[/D020/]
+    \textit{Profildaten:} Das persönliche Profil eines Benutzers zu einem Spieltyp.
+    Die Anzahl der offenen, gewonnen, verlorenen und unentschiedenen Spiele
+    wird zur Laufzeit ermittelt und nicht explizit im Profil gespeichert!
+    \begin{itemize}
+      \item \textbf{BenutzerID}
+      \item \textbf{Spieletyp} \textit{(Mühle, Dame oder Schach)}
+      \item \textbf{Wertungszahl}
+      \item Sichtbarkeit
+        \begin{itemize}
+          \item \textbf{Offene Spiele}
+          \item \textbf{Gewonnene Spiele}
+          \item \textbf{Verlorene Spiele}
+          \item \textbf{Unentschiedene Spiele}
+        \end{itemize}
+    \end{itemize}
+\end{description}
+
+\begin{description}
+  \item[/D030/]
+    \textit{Konfigurationsdaten:} Die persönliche Konfiguration eines Benutzers:
+    \begin{itemize}
+      \item \textbf{BenutzerID}
+      \item Darstellungsfarben
+        \begin{itemize}
+          \item \textbf{Hintergrundfarbe}
+          \item \textbf{Textfarbe}
+          \item \textbf{Rahmenfarbe}
+          \item \textbf{Spielfeldfarbe Weiss}
+          \item \textbf{Spielfeldfarbe Schwarz}
+        \end{itemize}
+      \item Darstellungsschema
+        \begin{itemize}
+          \item \textbf{Menu} \textit{(links, oben oder rechts)}
+          \item \textbf{Spielfeld} \textit{(zentrieren oder am Fensterrand)}
+        \end{itemize}
+      \item Ablauflogik
+        \begin{itemize}
+          \item vor Ausführung eines Spielzuges Bestätigungsfenster anzeigen
+          \item nach Ausführung eines Spielzuges
+            \begin{itemize}
+              \item aktuelles Spiel erneut anzeigen oder
+              \item alle eigenen offenen Spiele anzeigen oder
+              \item das nächste offene Spiel anzeigen
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{description}
+
+\begin{description}
+  \item[/D110/]
+    \textit{Spieldaten:} Der aktuelle Status eines einzelnen Spieles:
+    \begin{itemize}
+      \item \textbf{SpielID} \textit{(eindeutig)}
+      \item \textbf{Spieletyp} \textit{(Mühle, Dame oder Schach)}
+      \item \textbf{Status} \textit{(Initiiert, Laufend, Weiss, Schwarz oder Unentschieden)}
+      \item \textbf{Anzahl der Halbzüge}
+      \item Spieler 1 und 2 \textit{(Weiss und Schwarz)} jeweils:
+        \begin{itemize}
+          \item \textbf{BenutzerID}
+          \item \textbf{Summe der Bedenkzeit} \textit{(X Minuten)}
+        \end{itemize}
+      \item Sonstige Daten
+        \begin{itemize}
+          \item \textbf{Halbzugbedenkzeit} \textit{(X Tage)}
+          \item \textbf{Toleranzzeit} \textit{(X Tage)}
+          \item \textbf{Initialisierungsdatum} \textit{(Datum)}
+          \item \textbf{letzter Halbzug} \textit{(Datum)}
+        \end{itemize}
+    \end{itemize}
+\end{description}
+
+\begin{description}
+  \item[/D111/]
+    \textit{Zugdaten:} Einzelner Zug eines Spiels:
+    \begin{itemize}
+      \item \textbf{SpielID}
+      \item \textbf{Zugnummer}
+      \item \textbf{Anfangskoordinate}
+      \item \textbf{Zielkoordinate}
+    \end{itemize}
+\end{description}
